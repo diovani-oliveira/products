@@ -10,7 +10,7 @@ export default function Example() {
             <Image src={logo} alt="" className='h-10 w-auto'/>
             <a href="./" className='text-white font-semibold flex items-center'><Image src={Arrowback} alt='' className='w-7'/>Voltar</a>
         </header>
-        <div className="h-screen flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <div className="h-screen absolute top-0 flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
               Entre em sua conta

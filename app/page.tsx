@@ -8,6 +8,7 @@ import Image from 'next/image'
 
 import logo from './images/logo.png'
 import image1 from './images/image1.png'
+import star from './icons/estrela.png'
 
 const links = [
   { name: 'Nome Completo'},
@@ -85,6 +86,12 @@ export default function Home() {
                 >
                   Ver Produtos
                 </a>
+                <a
+                  href="./products"
+                  className="rounded-md bg-black px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-transparent border transition-all duration-300 hover:text-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Cardápio do Dia
+                </a>
               </div>
             </div>
           </div>
@@ -99,6 +106,87 @@ export default function Home() {
                   'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
               }}
             />
+          </div>
+        </div>
+      </div>
+      <div className="">
+        <div className="w-11/12 mx-auto text-white">
+          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
+          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Queijo Mussarela</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Erva Doce</p>
+          </div>
+        </div>
+        <div className="w-11/12 mx-auto text-white">
+          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Terça-Feira</h1>
+          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Bacon</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Damasco com Chocolate Branco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maçã com Canela</p>
+          </div>
+        </div>
+        <div className="w-11/12 mx-auto text-white">
+          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Quarta-Feira</h1>
+          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Frango</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Banana cm Canela</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate com Café</p>
+          </div>
+        </div>
+        <div className="w-11/12 mx-auto text-white">
+          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Quinta-Feira</h1>
+          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Churrasco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Paçoca com Caramelo</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Nozes <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+          </div>
+        </div>
+        <div className="w-11/12 mx-auto text-white">
+          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Sexta-Feira</h1>
+          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Parmesão</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Stikadinho</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Amendoas Laminadas com Chocolate Meio Amargo</p>
+          </div>
+        </div>
+        <div className="w-11/12 mx-auto text-white">
+          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Sábado</h1>
+          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Gorgonzola <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Castanha do Pará com Chocolate Branco</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate a Leite</p>
+            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maça com Canela</p>
           </div>
         </div>
       </div>
@@ -168,9 +256,11 @@ export default function Home() {
         </div>
       </div>        
       <div className='mx-auto max-w-7xl border-t border-neutral-900'>
-        <a href="./">Início</a>
-        <a href="./products">Produtos</a>
-        <a href="./about-us">Sobre nós</a>
+        <div className='flex mx-auto'>
+          <a href="./" className='mx-8'>Início</a>
+          <a href="./products" className='mx-8'>Produtos</a>
+          <a href="./about-us" className='mx-8'>Sobre nós</a>
+        </div>
         <button>Nos siga no Instagram</button>
         <h1>Desenvolvido por:</h1>
         <h1>Diovani de Oliveira</h1>
