@@ -9,8 +9,7 @@ import logo from '../images/logo.png'
 const navigation = [
     { name: 'Início', href: './' },
     { name: 'Produtos', href: './products/' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Sobre nós', href: './about-us' },
   ]
 
 export default function Header(){

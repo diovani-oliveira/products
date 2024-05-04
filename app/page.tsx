@@ -2,17 +2,18 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { CloudArrowUpIcon, LockClosedIcon, ServerIcon, ArrowRightCircleIcon} from '@heroicons/react/20/solid'
 import Header from './components/Header'
 import Image from 'next/image'
 
 import logo from './images/logo.png'
+import image1 from './images/image1.png'
 
 const links = [
-  { name: 'Open roles', href: '#' },
-  { name: 'Internship program', href: '#' },
-  { name: 'Our values', href: '#' },
-  { name: 'Meet our leadership', href: '#' },
+  { name: 'Nome Completo'},
+  { name: 'Sabor (Verifique o Cardápio do Dia)'},
+  { name: 'Tamanho'},
+  { name: 'Retirada ou Entrega'},
 ]
 const stats1 = [
   { name: 'Offices worldwide', value: '12' },
@@ -21,37 +22,31 @@ const stats1 = [
   { name: 'Paid time off', value: 'Unlimited' },
 ]
 const stats2 = [
-  { id: 1, name: 'Segunda-Feira', value: '13 às 18' },
-  { id: 2, name: 'Terça à Sexta', value: '8 às 18' },
-  { id: 3, name: 'Sábado', value: '10 às 17' },
+  { id: 1, name: 'Segunda-Feira', value: '13h às 18h' },
+  { id: 2, name: 'Terça à Sexta', value: '08h às 18h' },
+  { id: 3, name: 'Sábado', value: '10h às 17h' },
   { id: 4, name: 'Domingo', value: 'Fechado' },
 ]
 const features = [
   {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CloudArrowUpIcon,
+    name: 'Um mundo de delícias!',
+    description: 'Com ingredientes cuidadosamente selecionados, mantemos o sabor irresistível de sempre, enquanto abrimos as portas para um mundo de delícias sem lactose.',
+    icon: ArrowRightCircleIcon,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
+    name: 'Experimente!',
+    description: 'Experimente hoje mesmo e descubra uma nova maneira de se deliciar! Venha nos visitar e faça parte dessa nova experiência.',
+    icon: ArrowRightCircleIcon,
   },
 ]
 
-export default function Example() {
+export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <main>
+    <main className='bg-black text-white'>
       <Header />
-      <div className="bg-black h-screen">
+      <div className="h-screen">
 
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div
@@ -70,7 +65,7 @@ export default function Example() {
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-300 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Diversos sabores todos os dias!😋.{' '}
-                <a href="#" className="font-semibold text-white hover:underline">
+                <a href="./products" className="font-semibold text-white hover:underline">
                   <span className="absolute inset-0" aria-hidden="true" />
                   Ver Sabores <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -85,13 +80,10 @@ export default function Example() {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="#"
-                  className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-transparent border transition-all duration-300 hover:text-white hover:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  href="./products"
+                  className="rounded-md bg-white px-10 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-transparent border transition-all duration-300 hover:text-white hover:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Get started
-                </a>
-                <a href="#" className="text-sm font-semibold leading-6 text-neutral-100 hover:underline">
-                  Learn more <span aria-hidden="true">→</span>
+                  Ver Produtos
                 </a>
               </div>
             </div>
@@ -115,17 +107,16 @@ export default function Example() {
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
-                <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
+                <h2 className="text-base font-semibold leading-7 text-neutral-800">Novidade!</h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sem Lactose</p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                  iste dolor cupiditate blanditiis ratione.
+                Para os intolerantes a lactose ou que não consomem leite de origem animal temos opção da rosca sem lactose feita com leite vegetal.
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                   {features.map((feature) => (
                     <div key={feature.name} className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
-                        <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                        <feature.icon className="absolute left-1 top-1 h-5 w-5 text-neutral-700" aria-hidden="true" />
                         {feature.name}
                       </dt>{' '}
                       <dd className="inline">{feature.description}</dd>
@@ -134,8 +125,8 @@ export default function Example() {
                 </dl>
               </div>
             </div>
-            <img
-              src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            <Image
+              src={image1}
               alt="Product screenshot"
               className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
               width={2432}
@@ -144,71 +135,46 @@ export default function Example() {
           </div>
         </div>
       </div>
-      <div className="relative isolate overflow-hidden bg-black py-24 sm:py-32">
-        <div
-          className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ffffff] to-[#000000] opacity-20"
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-          />
-        </div>
-        <div
-          className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#000000] to-[#ffffff] opacity-20"
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-          />
-        </div>
+      <div className="relative isolate overflow-hidden py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Recado Importante!</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+              Ficamos com o WhatsApp aberto no computador, portanto os pedidos em áudios não conseguimos escutar.
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Faça seu pedido em apenas um texto com as seguintes informações:
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               {links.map((link) => (
-                <a key={link.name} href={link.href}>
-                  {link.name} <span aria-hidden="true">&rarr;</span>
-                </a>
+                  <p>{link.name} <span aria-hidden="true">&rarr;</span></p>
               ))}
             </div>
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-              {stats1.map((stat1) => (
-                <div key={stat1.name} className="flex flex-col-reverse">
-                  <dt className="text-base leading-7 text-gray-300">{stat1.name}</dt>
-                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat1.value}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
         </div>
-      </div>
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto mt-36 py-8 max-w-7xl lg:px-8">
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center ssm:grid-cols-2 lg:grid-cols-4">
             {stats2.map((stat2) => (
               <div key={stat2.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt className="text-base leading-7 text-gray-700">{stat2.name}</dt>
-                <dd className="order-first text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                <dt className="text-base leading-7 text-neutral-400">{stat2.name}</dt>
+                <dd className="order-first text-4xl font-semibold tracking-tight text-white sm:text-4xl">
                   {stat2.value}
                 </dd>
               </div>
             ))}
           </dl>
         </div>
+      </div>        
+      <div className='mx-auto max-w-7xl border-t border-neutral-900'>
+        <a href="./">Início</a>
+        <a href="./products">Produtos</a>
+        <a href="./about-us">Sobre nós</a>
+        <button>Nos siga no Instagram</button>
+        <h1>Desenvolvido por:</h1>
+        <h1>Diovani de Oliveira</h1>
+        <p>© 2024 | Diovani de Oliveira - Todos os Direitos Reservados</p>
       </div>
     </main>
   )
