@@ -133,7 +133,7 @@ export default function Home() {
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": "10px",
             "--swiper-pagination-bullet-horizontal-gap": "3px"
-          }}
+          } as any}
         >
           <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
             <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
@@ -240,7 +240,7 @@ export default function Home() {
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": "10px",
             "--swiper-pagination-bullet-horizontal-gap": "3px"
-          }}
+          } as any}
         >
           <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
             <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
@@ -347,7 +347,7 @@ export default function Home() {
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": "10px",
             "--swiper-pagination-bullet-horizontal-gap": "3px"
-          }}
+          } as any}
         >
           <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
             <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
