@@ -8,7 +8,16 @@ import Image from 'next/image'
 
 import logo from './images/logo.png'
 import image1 from './images/image1.png'
+import back from './icons/arrow-back.svg'
 import star from './icons/estrela.png'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 
 const links = [
   { name: 'Nome Completo'},
@@ -82,13 +91,13 @@ export default function Home() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="./products"
-                  className="rounded-md bg-white px-10 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-transparent border transition-all duration-300 hover:text-white hover:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-white px-10 py-2.5 text-xs font-semibold text-black shadow-sm hover:bg-transparent border transition-all duration-300 hover:text-white hover:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Ver Produtos
                 </a>
                 <a
                   href="./products"
-                  className="rounded-md bg-black px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-transparent border transition-all duration-300 hover:text-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md bg-black px-10 py-2.5 text-xs font-semibold text-white shadow-sm hover:bg-transparent border transition-all duration-300 hover:text-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Cardápio do Dia
                 </a>
@@ -109,86 +118,326 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="">
-        <div className="w-11/12 mx-auto text-white">
-          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
-          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
-            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Queijo Mussarela</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Erva Doce</p>
-          </div>
-        </div>
-        <div className="w-11/12 mx-auto text-white">
-          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Terça-Feira</h1>
-          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
-            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Bacon</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Damasco com Chocolate Branco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maçã com Canela</p>
-          </div>
-        </div>
-        <div className="w-11/12 mx-auto text-white">
-          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Quarta-Feira</h1>
-          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
-            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Frango</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Banana cm Canela</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate com Café</p>
-          </div>
-        </div>
-        <div className="w-11/12 mx-auto text-white">
-          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Quinta-Feira</h1>
-          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
-            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Churrasco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Paçoca com Caramelo</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Nozes <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
-          </div>
-        </div>
-        <div className="w-11/12 mx-auto text-white">
-          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Sexta-Feira</h1>
-          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
-            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Parmesão</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Stikadinho</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Amendoas Laminadas com Chocolate Meio Amargo</p>
-          </div>
-        </div>
-        <div className="w-11/12 mx-auto text-white">
-          <h1 className='text-xl font-semibold w-11/12 mx-auto mb-6'>Sábado</h1>
-          <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
-            <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Gorgonzola <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Castanha do Pará com Chocolate Branco</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate a Leite</p>
-            <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maça com Canela</p>
-          </div>
-        </div>
+      <div className="mb-8 sm:hidden">
+        <div className="pb-5 mb-4 border-b border-neutral-800 mx-auto w-11/12 text-white text-xl font-bold"><h1>Cardápio da Semana</h1></div>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          pagination
+          slidesPerView={1}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          style={{
+            "--swiper-pagination-color": "#c8c8c8",
+            "--swiper-pagination-bullet-inactive-color": 'rgb(23, 23, 23)',
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "10px",
+            "--swiper-pagination-bullet-horizontal-gap": "3px"
+          }}
+        >
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Queijo Mussarela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Erva Doce</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Terça-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Bacon</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maçã com Canela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Damasco com Chocolate Branco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Quarta-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Frango</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Banana cm Canela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate com Café</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Quinta-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Paçoca com Caramelo</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Churrasco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Nozes <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide>
+            <div className="w-11/12 mx-auto text-white mt-10">
+              <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Sexta-Feira</h1>
+              <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+                <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Parmesão</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Stikadinho</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Amendoas com Chocolate Meio Amargo</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-11/12 mx-auto text-white mt-10">
+              <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Sábado</h1>
+              <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+                <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Castanha do Pará com Chocolate Branco</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate a Leite</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maça com Canela</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Gorgonzola <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="mb-8 hidden sm:block lg:hidden">
+        <div className="pb-5 mb-4 border-b border-neutral-800 mx-auto w-11/12 text-white text-xl font-bold"><h1>Cardápio da Semana</h1></div>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={-10}
+          pagination
+          slidesPerView={2}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          style={{
+            "--swiper-pagination-color": "#c8c8c8",
+            "--swiper-pagination-bullet-inactive-color": 'rgb(23, 23, 23)',
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "10px",
+            "--swiper-pagination-bullet-horizontal-gap": "3px"
+          }}
+        >
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Queijo Mussarela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Erva Doce</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Terça-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Bacon</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maçã com Canela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Damasco com Chocolate Branco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Quarta-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Frango</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Banana cm Canela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate com Café</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Quinta-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Paçoca com Caramelo</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Churrasco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Nozes <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide>
+            <div className="w-11/12 mx-auto text-white mt-10">
+              <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Sexta-Feira</h1>
+              <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+                <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Parmesão</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Stikadinho</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Amendoas com Chocolate Meio Amargo</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-11/12 mx-auto text-white mt-10">
+              <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Sábado</h1>
+              <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+                <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Castanha do Pará com Chocolate Branco</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate a Leite</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maça com Canela</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Gorgonzola <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="mb-8 hidden lg:block max-w-screen-2xl mx-auto">
+        <div className="pb-5 mb-4 border-b border-neutral-800 mx-auto w-11/12 text-white text-xl font-bold"><h1>Cardápio da Semana</h1></div>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={-10}
+          pagination
+          slidesPerView={3}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          style={{
+            "--swiper-pagination-color": "#c8c8c8",
+            "--swiper-pagination-bullet-inactive-color": 'rgb(23, 23, 23)',
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "10px",
+            "--swiper-pagination-bullet-horizontal-gap": "3px"
+          }}
+        >
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Segunda-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Queijo Mussarela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Erva Doce</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Terça-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Bacon</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Prestígio</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maçã com Canela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Damasco com Chocolate Branco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Quarta-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Frango</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Banana cm Canela</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate com Café</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide><div className="w-11/12 mx-auto text-white mt-10">
+            <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Quinta-Feira</h1>
+            <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+              <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Paçoca com Caramelo</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate ao Leite</p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Churrasco <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Nozes <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+              <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+            </div>
+          </div></SwiperSlide>
+          <SwiperSlide>
+            <div className="w-11/12 mx-auto text-white mt-10">
+              <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Sexta-Feira</h1>
+              <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+                <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Focaccia</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Parmesão</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Stikadinho</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate Branco</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Amendoas com Chocolate Meio Amargo</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-11/12 mx-auto text-white mt-10">
+              <h1 className='text-lg font-semibold w-11/12 mx-auto mb-6'>Sábado</h1>
+              <div className="bg-neutral-950 p-3 rounded-2xl mb-10">
+                <p className='h-12 flex items-center text-sm w-11/12 mx-auto'>Tradicional</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Tomate com Manjericão</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Linguiça</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Alho Poró</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Castanha do Pará com Chocolate Branco</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Chocolate a Leite</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Maça com Canela</p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'>Gorgonzola <span className='absolute right-10 flex items-center'><Image src={star} alt="" className='mr-2 h-3 w-auto'/>Premium</span></p>
+                <p className='h-12 flex items-center text-sm border-t border-neutral-900 w-11/12 mx-auto'> </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className="overflow-hidden bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
