@@ -512,9 +512,9 @@ export default function Home() {
             </div>
             <div className="my-4 mt-12 text-center lg:w-4/12 lg:my-auto lg:flex lg:justify-around lg:border-x border-neutral-800 px-8">
               <p className='border-b border-neutral-800 w-fit mx-auto pb-2 px-4 text-neutral-300 text-sm lg:hidden'>Links Rápidos</p>
-              <a href='./' className='my-2'>Início</a>
-              <a href='./products' className='my-2'>Produtos</a>
-              <a href='./about-us' className='my-2'>Sobre nós</a>
+              <p className='my-2 w-full'><a href='./'>Início</a></p>
+              <p className='my-2 w-full'><a href='./products'>Produtos</a></p>
+              <p className='my-2 w-full'><a href='./about-us'>Sobre nós</a></p>
             </div>
             <div className="lg:w-4/12 mt-12 lg:mt-0 flex items-center justify-center">
               <Image src={instagram} alt="" className='h-8 w-fit'/>
