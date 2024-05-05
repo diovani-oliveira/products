@@ -10,6 +10,7 @@ import logo from './images/logo.png'
 import image1 from './images/image1.png'
 import back from './icons/arrow-back.svg'
 import star from './icons/estrela.png'
+import instagram from './icons/instagram.png'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -504,16 +505,22 @@ export default function Home() {
           </dl>
         </div>
       </div>        
-      <div className='mx-auto max-w-7xl border-t border-neutral-900'>
-        <div className='flex mx-auto'>
-          <a href="./" className='mx-8'>Início</a>
-          <a href="./products" className='mx-8'>Produtos</a>
-          <a href="./about-us" className='mx-8'>Sobre nós</a>
+      <div className='relative mx-auto w-full border-t border-neutral-900 pb-3 px-8'>
+        <div className="w-full mx-auto max-w-7xl h-full py-6 lg:flex lg:justify-between">
+            <div className="w-fit lg:w-4/12 lg:flex mx-auto lg:m-0">
+              <Image src={logo} alt="" className='h-12 w-fit mx-auto my-auto'/>
+            </div>
+            <div className="my-4 mt-12 text-center lg:w-4/12 lg:my-auto lg:flex lg:justify-around lg:border-x border-neutral-800 px-8">
+              <p className='border-b border-neutral-800 w-fit mx-auto pb-2 px-4 text-neutral-300 text-sm lg:hidden'>Links Rápidos</p>
+              <a href='./' className='my-2'>Início</a>
+              <a href='./products' className='my-2'>Produtos</a>
+              <a href='./about-us' className='my-2'>Sobre nós</a>
+            </div>
+            <div className="lg:w-4/12 mt-12 lg:mt-0 flex items-center justify-center">
+              <Image src={instagram} alt="" className='h-8 w-fit'/>
+            </div>
         </div>
-        <button>Nos siga no Instagram</button>
-        <h1>Desenvolvido por:</h1>
-        <h1>Diovani de Oliveira</h1>
-        <p>© 2024 | Diovani de Oliveira - Todos os Direitos Reservados</p>
+        <div className="bottom-0 top-full bg-white w-screen absolute left-0"><p className='text-black text-xs mx-auto w-fit py-2'>© 2024 | Diovani de Oliveira - Todos os Direitos Reservados</p></div>
       </div>
     </main>
   )
